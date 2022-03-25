@@ -54,4 +54,24 @@ class ArrayUtilTest {
         assertArrayEquals(result, expectedValue)
     }
 
+    @Test
+    fun stringToArrayInt_ShouldReturnCorrectValue() {
+        val str = "1 2 3 4 5"
+        val expectedValue = arrayOf(1, 2, 3, 4, 5)
+
+        val result = ArrayUtil.stringToArray(str)
+
+        assertArrayEquals(result, expectedValue)
+    }
+
+    @Test
+    fun arrayToString_ShouldReturnCorrectValue() {
+        val arr = arrayOf(1, 2, 3, 4, 5)
+        val expectedValue = "1, 2, 3, 4, 5"
+
+        val result = ArrayUtil.arrayToString(arr)
+
+        assertEquals(result, expectedValue)
+    }
+
 }

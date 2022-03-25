@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">QlueTechnical</string>
+    <string name="input_array_hint">Input series of numbers</string>
+    <string name="input_array_helper_text">example: 1 2 3 4 (separate it with <b>space</b>)</string>
+    <string name="btn_sort_text">Sort</string>
+    <string name="btn_multiply_text">Multiply</string>
+    <string name="btn_add_and_subtract_text">Add and Subtract</string>
+    <string name="label_result">Result</string>
+    <string name="cannot_empty_statement">Field cannot be empty</string>
 </resources>

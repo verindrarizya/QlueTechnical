@@ -1,6 +1,25 @@
 package com.verindrarizya.qluetechnical.util
 
 object ArrayUtil {
+    fun stringToArray(str: String): Array<Int> {
+        return str.split(" ").map { it.toInt() }.toTypedArray()
+    }
+
+    fun arrayToString(arr: Array<Int>): String {
+        var str = ""
+        val length = arr.size - 1
+
+        for (i in 0..length) {
+            if (i != length) {
+                str += "${arr[i]}, "
+            } else {
+                str += arr[i]
+            }
+        }
+
+        return str
+    }
+
     fun isListOfInt(arr: List<Any>): Boolean {
         val newArr = arr.filterIsInstance<Int>()
 
