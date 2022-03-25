@@ -34,4 +34,14 @@ class ArrayUtilTest {
         assertArrayEquals(result, expectedValue)
     }
 
+    @Test
+    fun multiply_ShouldReturnMultipliedArrayValue() {
+        val arr = arrayOf(1, 2, 3, 4, 5, 6)
+        val expectedValue = arrayOf(6, 10, 12, 12, 10, 6)
+
+        val result = ArrayUtil.multiply(arr)
+
+        assertArrayEquals(result, expectedValue)
+    }
+
 }
