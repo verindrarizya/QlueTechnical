@@ -1,8 +1,14 @@
 package com.verindrarizya.qluetechnical.util
 
 object ArrayUtil {
-    fun stringToArray(str: String): Array<Int> {
-        return str.split(" ").map { it.toInt() }.toTypedArray()
+    fun stringToArray(str: String): Array<Int>? {
+        return str.split(" ").map {
+            try {
+                it.toInt()
+            } catch (e: Exception) {
+                return null
+            }
+        }.toTypedArray()
     }
 
     fun arrayToString(arr: Array<Int>): String {
@@ -18,12 +24,6 @@ object ArrayUtil {
         }
 
         return str
-    }
-
-    fun isListOfInt(arr: List<Any>): Boolean {
-        val newArr = arr.filterIsInstance<Int>()
-
-        return newArr.size == arr.size
     }
 
     fun sort(arr: Array<Int>): Array<Int> {
