@@ -34,4 +34,19 @@ object ArrayUtil {
 
         return newArr
     }
+
+    fun addAndSubtract(arr: Array<Int>): Array<Int> {
+        val length = arr.size - 1
+        val newArr = Array(length) {0}
+
+        for (i in 0..length - 1) {
+            when {
+                i == 0 -> newArr[i] = arr[i] + arr[i +1]
+                i % 2 == 0 -> newArr[i] = arr[i] + arr[i + 1]
+                i % 2 != 0 -> newArr[i] = arr[i] - arr[i + 1]
+            }
+        }
+
+        return newArr
+    }
 }

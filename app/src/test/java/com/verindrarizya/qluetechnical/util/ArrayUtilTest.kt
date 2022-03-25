@@ -44,4 +44,14 @@ class ArrayUtilTest {
         assertArrayEquals(result, expectedValue)
     }
 
+    @Test
+    fun addAndSubtract_ShouldReturnAddAndSubtractArrayValue() {
+        val arr = arrayOf(10, 33, 13, 72, 44, 51, 17)
+        val expectedValue = arrayOf(43, 20, 85, 28, 95, 34)
+
+        val result = ArrayUtil.addAndSubtract(arr)
+
+        assertArrayEquals(result, expectedValue)
+    }
+
 }
